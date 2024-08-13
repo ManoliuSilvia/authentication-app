@@ -1,0 +1,36 @@
+.window {
+    background-color: #0c1c36;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.main {
+    position: absolute;
+    background-color: #979fb0;
+    left: calc(50% - 35rem / 2);
+    top: calc(50% - 23rem / 2);
+    width: 35rem;
+    height: 23rem;
+}
+
+.title {
+    color: darkred;
+    font-size: 2.4rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.message {
+    color: firebrick;
+    font-size: 1.4rem;
+    margin: 2rem 0 0 2rem;
+}
+
+.backElem, .backElem:hover, .backElem:active {
+    text-decoration: none;
+    color: black;
+    background-color: firebrick;
+    padding: 1rem;
+    margin-left: 25rem;
+}

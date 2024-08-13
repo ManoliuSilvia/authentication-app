@@ -1,0 +1,65 @@
+.form{
+    max-width: 40rem;
+    margin: 2rem auto;
+}
+
+.fields{
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.label{
+    font-size: 18px;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+.actions button{
+    font-size: 14px;
+}
+
+
+.closeButton{
+    background-color: transparent;
+    border-radius: 5px;
+    border:none;
+    border-bottom: 1px solid #071224;
+    padding: 6px;
+    color: white;
+    position: absolute;
+    bottom: 3rem;
+    right: 10rem;
+    transition: all .4s;
+    &:hover{
+        transform: translateY(-2px);
+        box-shadow: 2px 2px 5px #071224 ;
+    }
+    &:active{
+        color: #979fb0;
+    }
+}
+
+.submitButton{
+    background-color: #0c1c36;
+    box-shadow: 2px 2px 5px #071224 ;
+    border-radius: 5px;
+    padding: 6px;
+    color: white;
+    border: none;
+    position: absolute;
+    bottom: 3rem;
+    right: 4rem;
+    transition: all .4s;
+    &:hover{
+        transform: translateY(-2px);
+    }
+    &:active{
+        color: #979fb0;
+    }
+}

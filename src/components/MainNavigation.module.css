@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #122e5c;
+    height: 5rem;
+    margin-bottom: 5rem;
+
+    box-shadow: 0 2px 5px #071224 ;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2rem;
+}
+
+.element {
+    height: 100%;
+    align-self: stretch;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    color: #e4eaf5;
+    padding: 0 1rem;
+}
+
+.element:hover,
+.element.active {
+    background-color: #2058b3;
+}
+
+.text{
+    color: #e4eaf5;
+    align-self: center;
+    margin-left: 2rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+}

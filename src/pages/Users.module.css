@@ -1,0 +1,33 @@
+
+.list{
+    width: 80vw;
+    padding: 3rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 17px 17px;
+    background-color: white;
+    justify-items: center;
+    @media only screen and (max-width: 1000px){
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 1rem;
+    }
+}
+
+.element{
+    border: #122e5c 1px solid;
+    border-radius: 5rem;
+}
+
+.button{
+    border: none;
+    background-color: transparent;
+    transition: all .4s;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    &:hover{
+        transform: rotate(180deg);
+        background-color: #b8c7de;
+    }
+}

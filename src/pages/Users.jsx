@@ -7,11 +7,15 @@ import classes from "./Users.module.css"
 import {jwtDecode} from "jwt-decode";
 import {AuthContext} from "../store/auth-context";
 import {getToken, isAdmin} from "../util/auth-util";
+import ConfirmationModal from "../components/ConfirmationModal";
+import {Button} from "@mui/material";
+
 
 export default function UsersPage() {
     const [users, setUsers] = useState([]);
     const [adminBool, setAdminBool] = useState(false);
     const [deleteTrigger, setDeleteTrigger] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const ctx = useContext(AuthContext);
 
@@ -86,7 +90,19 @@ export default function UsersPage() {
                                     </React.Fragment>
                                 }
                             />
-                            {adminBool && <button className={classes.button} onClick={() => handleDelete(user.id)}>X</button>}
+                            {adminBool &&
+                                <button
+                                    className={classes.button}
+                                    onClick={()=> {
+                                        setOpen(true)
+                                    }}
+                                >X</button>}
+                            <ConfirmationModal open={open} setOpen={setOpen}>
+                                <Button onClick={() => {
+                                    handleDelete(user.id);
+                                    setOpen(false);
+                                }}>Delete</Button>
+                            </ConfirmationModal>
                         </ListItem>
                     ))
                 }

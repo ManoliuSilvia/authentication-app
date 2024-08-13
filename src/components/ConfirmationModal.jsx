@@ -12,6 +12,7 @@ const style = {
     p: 4,
 };
 
+
 export default function ConfirmationModal({children, open, setOpen}){
     return (
         <Modal

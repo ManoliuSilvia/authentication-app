@@ -37,7 +37,6 @@ export default function UsersPage() {
         }
         getUsers();
     }, [deleteTrigger])
-
     useEffect(() => {
         if (ctx.token) {
             setAdminBool(isAdmin(ctx.token));
